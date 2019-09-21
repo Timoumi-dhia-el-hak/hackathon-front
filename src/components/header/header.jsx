@@ -1,17 +1,15 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import InputBase from '@material-ui/core/InputBase';
+import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import Badge from '@material-ui/core/Badge';
+import SearchIcon from '@material-ui/icons/Search';
 import MenuIcon from '@material-ui/icons/Menu';
-import ShoppingBasket from '@material-ui/icons/ShoppingBasket';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Slide from '@material-ui/core/Slide';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
@@ -21,6 +19,11 @@ import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
 import Drawer from '@material-ui/core/Drawer';
 import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
+import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
+import Avatar from '@material-ui/core/Avatar';
+
+
+import logo from '../../assets/Groupe 36.svg'
 
 const useStyles = makeStyles((theme) => ({
 	grow: {
@@ -62,7 +65,51 @@ const useStyles = makeStyles((theme) => ({
 	},
 	button: {
 		margin: theme.spacing(1)
-	}
+	},
+	search: {
+    position: 'relative',
+    borderRadius: theme.shape.borderRadius,
+    backgroundColor: fade(theme.palette.common.white, 0.15),
+    '&:hover': {
+      backgroundColor: fade(theme.palette.common.white, 0.25),
+    },
+    marginRight: theme.spacing(2),
+    marginLeft: 0,
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: theme.spacing(3),
+      width: 'auto',
+    },
+  },
+  searchIcon: {
+    width: theme.spacing(7),
+    height: '100%',
+    position: 'absolute',
+    pointerEvents: 'none',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  inputRoot: {
+    color: 'inherit',
+  },
+  inputInput: {
+    padding: theme.spacing(1, 1, 1, 7),
+    transition: theme.transitions.create('width'),
+    width: '100%',
+    [theme.breakpoints.up('md')]: {
+      width: 200,
+		},
+		
+	},
+	avatar: {
+    margin: 10,
+  },
+  bigAvatar: {
+    margin: 10,
+    width: 60,
+    height: 60,
+  },
 }));
 
 function HideOnScroll (props){
@@ -118,19 +165,15 @@ function header (props){
 			<List>
 				<ListItem button dense alignItems="center">
 					<ListItemIcon>
-						<ShoppingBasket />
 					</ListItemIcon>
 				</ListItem>
 				<ListItem button>
 					<ListItemIcon>
-						<Badge badgeContent={11} color="secondary">
-							<ShoppingBasket />
-						</Badge>
+			
 					</ListItemIcon>
 				</ListItem>
 				<ListItem button>
 					<ListItemIcon>
-						<ShoppingBasket />
 					</ListItemIcon>
 				</ListItem>
 			</List>
@@ -151,39 +194,47 @@ function header (props){
 							<MenuIcon />
 						</IconButton>
 						<Link href="/">
-							<Typography align="center" className={classes.title} variant="h6" noWrap>
-								etsy
-							</Typography>
+						<img src={logo} alt=""/>
 						</Link>
+						<div className={classes.search}>
+            <div className={classes.searchIcon}>
+              <SearchIcon />
+            </div>
+            <InputBase
+              placeholder="Domaine"
+              classes={{
+                root: classes.inputRoot,
+                input: classes.inputInput,
+              }}
+              inputProps={{ 'aria-label': 'search' }}
+            />
+          </div>
+						<div className={classes.search}>
+            <div className={classes.searchIcon}>
+              <AccountBalanceIcon />
+            </div>
+            <InputBase
+              placeholder="Centre de Formation"
+              classes={{
+                root: classes.inputRoot,
+                input: classes.inputInput,
+              }}
+              inputProps={{ 'aria-label': 'search' }}
+            />
+          </div>
 						<div className={classes.grow} />
-						<Tabs className={classes.sectionDesktop}>
-							<Tab label="Événements" />
-							<Tab label="Comment ça marche" />
-							<Tab label="Je loue ma robe" />
-						</Tabs>
-						<div className={classes.sectionDesktop}>
-							<IconButton aria-label="show 4 new mails" color="inherit">
-								<Badge badgeContent={4} color="secondary">
-									<FavoriteBorder />
-								</Badge>
-							</IconButton>
-							<IconButton aria-label="show 17 new notifications" color="inherit">
-								<Badge badgeContent={17} color="secondary">
-									<ShoppingBasket />
-								</Badge>
-							</IconButton>
-							<IconButton
-								edge="end"
-								aria-label="account of current user"
-								aria-controls={menuId}
-								aria-haspopup="true"f
-								color="inherit">
-								<ShoppingBasket />
-							</IconButton>
-						</div>
-						<Button href="/login" variant="outlined" color="inherit" className={classes.button}>
-							Login
+						{/* <Button href="/Sign Up" variant="outlined" color="inherit" className={classes.button}>
+							S'inscrire
 						</Button>
+						<Button href="/Sign In" variant="outlined" color="inherit" className={classes.button}>
+							Se connecter
+						</Button> */}
+						<img src="" alt=""/>
+					
+						<Avatar alt="Remy Sharp" src="https://images.unsplash.com/photo-1542080681-b52d382432af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80" className={classes.avatar} />
+						<Typography>
+							wissem yahyaoui 
+						</Typography>
 					</Toolbar>
 				</AppBar>
 
