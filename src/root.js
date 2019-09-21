@@ -2,9 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { ThemeProvider } from '@material-ui/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import Container from '@material-ui/core/Container';
 
 import Header from './components/header';
 import Footer from './components/footer';
+import HomePage from './pages/home';
 import theme from './config/theme';
 
 function BasicExample (){
@@ -12,23 +14,15 @@ function BasicExample (){
 		<ThemeProvider theme={theme}>
 			<CssBaseline />
 			<Router>
-				<div>
+				<Container maxWidth="lg">
 					<Header />
-					<Route exact path="/" component={Home} />
+					<Route exact path="/" component={HomePage} />
 					<Route path="/about" component={About} />
 					<Route path="/topics" component={Topics} />
-          <Footer />
-				</div>
+					<Footer />
+				</Container>
 			</Router>
 		</ThemeProvider>
-	);
-}
-
-function Home (){
-	return (
-		<div>
-			<h2>La Reconversion Facile</h2>
-		</div>
 	);
 }
 

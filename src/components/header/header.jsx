@@ -229,8 +229,6 @@ function header (props){
 						<Button href="/Sign In" variant="outlined" color="inherit" className={classes.button}>
 							Se connecter
 						</Button> */}
-						<img src="" alt=""/>
-					
 						<Avatar alt="Remy Sharp" src="https://images.unsplash.com/photo-1542080681-b52d382432af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80" className={classes.avatar} />
 						<Typography>
 							wissem yahyaoui 
