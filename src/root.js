@@ -14,8 +14,6 @@ function BasicExample (){
 			<Router>
 				<div>
 					<Header />
-
-					<hr />
 					<Route exact path="/" component={Home} />
 					<Route path="/about" component={About} />
 					<Route path="/topics" component={Topics} />
@@ -29,7 +27,7 @@ function BasicExample (){
 function Home (){
 	return (
 		<div>
-			<h2>Home</h2>
+			<h2>La Reconversion Facile</h2>
 		</div>
 	);
 }
