@@ -6,6 +6,9 @@ import Link from '@material-ui/core/Link';
 import Container from '@material-ui/core/Container';
 import Typography from './components/Typography';
 import TextField from './components/TextField';
+import logo from '../../assets/appFooterTwitter.png'
+import logo1 from '../../assets/appFooterFacebook.png'
+
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -73,13 +76,15 @@ function footer (){
 						<Grid container direction="column" justify="flex-end" className={classes.iconsWrapper} spacing={2}>
 							<Grid item className={classes.icons}>
 								<a href="https://facebook.com" className={classes.icon}>
-									<img src="/static/onepirate/appFooterFacebook.png" alt="Facebook" />
+              	<img src= {logo1} alt="Twitter" />
 								</a>
+
+          
 								<a href="https://twitter.com" className={classes.icon}>
-									<img src="/static/onepirate/appFooterTwitter.png" alt="Twitter" />
+									<img src= {logo} alt="Twitter" />
 								</a>
 							</Grid>
-							<Grid item>© 2019 etsy</Grid>
+							<Grid item>© 2019 changes </Grid>
 						</Grid>
 					</Grid>
 					<Grid item xs={6} sm={4} md={2}>
