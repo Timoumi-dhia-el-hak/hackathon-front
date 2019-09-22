@@ -19,6 +19,7 @@ import logo3 from '../../assets/Groupe 243.svg';
 import logo4 from '../../assets/Groupe 244.svg';
 import logo5 from '../../assets/Groupe 247.svg';
 import logo6 from '../../assets/Groupe 250.svg';
+import Gmail from '../sign-in/signIn';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -65,6 +66,7 @@ export default function HomePage (){
 	}
 
 	return (
+    
 		<Container maxWidth="lg">
 			<Tabs value={value} onChange={handleChange} indicatorColor="primary" textColor="primary" centered style={{
         marginTop: 30,
@@ -155,17 +157,16 @@ export default function HomePage (){
 			<Grid container spacing={4} className={classes.Carousel}>
 				<Carousel autoPlay showThumbs={false}>
 					<div>
-						<img src="http://lorempixel.com/output/cats-q-c-640-480-1.jpg" />
-						<p>Legend 1</p>
-						<p className="legend">Legend 1</p>
+						<img src="https://byebyelesdettes.ca/wp-content/uploads/2018/05/3-methodes-pour-se-debarasser-de-vos-dettes-1024x512.jpg" />
+						<p className="legend">Les 3 moyens les plus efficaces de financer un changement de carrière</p>
 					</div>
 					<div>
-						<img src="http://lorempixel.com/output/cats-q-c-640-480-2.jpg" />
-						<p className="legend">Legend 2</p>
+						<img src="https://fr.organilog.com/wp-content/uploads/2016/04/cadre-dirigeant-avis-negatif-mecontent.png" />
+						<p className="legend">Les 6 erreurs de carrière à éviter</p>
 					</div>
 					<div>
-						<img src="http://lorempixel.com/output/cats-q-c-640-480-3.jpg" />
-						<p className="legend">Legend 3</p>
+						<img src="https://cdn.datafloq.com/cache/blog_images/878x531/12-amazing-big-data-success-stories-for-2016.jpg" />
+						<p className="legend">20 histoires de personnes comme vous qui ont réussi des changements</p>
 					</div>
 
 				</Carousel>
@@ -199,6 +200,7 @@ export default function HomePage (){
 					le travail de mon patron (ni celui de son patron); et j’étais pétrifié d’avoir atteint l’âge de 60 ou 70 ans
 					et de ne pas être fier du travail que j’avais accompli dans ma vie.
 				</Typography>
+        
 			</div>
 		</Container>
 	);

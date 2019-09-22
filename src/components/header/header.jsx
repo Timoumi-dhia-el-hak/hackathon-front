@@ -212,10 +212,9 @@ function header(props) {
             </div>
             <div className={classes.grow} />
             <Link href='/sign-up'>
-              {" "}
               <Button
                 variant='outlined'
-                color='inherit'
+                color='secendary'
                 className={classes.button}>
                 S'inscrire
               </Button>
@@ -224,7 +223,7 @@ function header(props) {
               {" "}
               <Button
                 variant='outlined'
-                color='inherit'
+                color='secendary'
                 className={classes.button}>
                 Se connecter
               </Button>
