@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { ThemeProvider } from '@material-ui/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
+// import { CardCenter} from './components/card'
+import ListCard from './components/card/listCard';
 
 import Header from './components/header';
 import Footer from './components/footer';
@@ -17,12 +19,23 @@ function BasicExample (){
 				<Container maxWidth="lg">
 					<Header />
 					<Route exact path="/" component={HomePage} />
-					<Route path="/about" component={About} />
+					<Route path="/search" component={ListCard} />
 					<Route path="/topics" component={Topics} />
 					<Footer />
 				</Container>
 			</Router>
 		</ThemeProvider>
+	);
+}
+
+function Home (){
+
+	return (
+		<div>
+			<h2>Home</h2>
+			
+			
+		</div>
 	);
 }
 
