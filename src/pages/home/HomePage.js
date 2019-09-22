@@ -117,7 +117,7 @@ export default function HomePage (){
 										Si vous êtes toujours à la recherche de la carrière de vos rêves, nous pouvons vous aider à prendre
 										la bonne décision.
 									</Typography>
-									<Button href="/Sign Up" variant="outlined" color="inherit" className={classes.button}>
+									<Button href="/sign-up" variant="outlined" color="inherit" className={classes.button}>
 										Aide moi à prendre la bonne décision
 									</Button>
 								</CardContent>
@@ -134,7 +134,7 @@ export default function HomePage (){
 										En effet, j’avais passé des années à me débattre pour trouver un moyen de changer, mais sans
 										progresser.
 									</Typography>
-									<Button href="/Sign Up" variant="outlined" color="inherit" className={classes.button}>
+									<Button href="/sign-up" variant="outlined" color="inherit" className={classes.button}>
 										Je connais la carrière
 									</Button>
 								</CardContent>
